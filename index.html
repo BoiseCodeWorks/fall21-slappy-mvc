@@ -13,22 +13,36 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">slappy</span>
-            </a>
-        </nav>
-    </header>
-    <main class="container">
-        <div id="app"></div>
-    </main>
-    <footer class="bg-dark text-light">
-        <div class="text-center">
-            <p><small>Made with love by Codeworks</small></p>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row py-lg-5 py-3">
+                <div class="col-lg-8">
+                    <div class="bg-dark p-3 rounded">
+                        <img src="https://i.ytimg.com/vi/vQ7F1Zj7KJE/maxresdefault.jpg" alt=""
+                            class="img-fluid rounded">
+                        <h3 class="text-light text-center mt-3 mb-0 text-uppercase">Slappy</h3>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <form onsubmit="app.charactersController.addCharacter()" class="card bg-dark text-light p-3">
+                        <div class="form-group">
+                            <label for="characterName" class="">Character Name</label>
+                            <input type="text" name="characterName" id="characterName" placeholder="Character Name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="characterImg" class="">Character Img</label>
+                            <input type="text" name="characterImg" id="characterImg" placeholder="Character Img" class="form-control" required minlength="10">
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-secondary" type="reset">Clear</button>
+                            <button class="btn btn-primary" type="submit">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </footer>
+    </main>
 
     <script src="app/main.js" type="module"></script>
 </body>

@@ -3,7 +3,11 @@ import Value from "../Models/Value.js";
 
 class ValuesService {
   addValue() {
-    ProxyState.values = [...ProxyState.values, new Value({ title: Math.random() })]
+    // TODO explain spread operator
+    ProxyState.values = [...ProxyState.values, new Value({ 
+      title: Math.random(),
+      color: 'green'
+    })]
   }
 }
 
